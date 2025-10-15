@@ -103,11 +103,18 @@ main {
     animation-range: entry 0 cover 80%;
 }
 
-.main-picture.two{
+.main-picture.two {
     width: 100%;
     animation: translate ease-in both;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
+}
+
+.main-picture.three {
+    width: 100%;
+    animation: scaling ease-in both;
+    animation-timeline: view();
+    animation-range: entry 0 cover 80%;
 }
 
 #picture-content {
@@ -120,7 +127,7 @@ main {
 }
 
 .scroll-section {
-    margin-bottom: 750px;
+    margin-bottom: 950px;
 }
 
 footer {
@@ -198,11 +205,30 @@ footer {
     }
 }
 
-@keyframes translate{
-    0%{
+@keyframes translate {
+    0% {
         transform: translateX(-110vw)
     }
-    100%{
-        transform:translateX(0vw);
+
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(0.5);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.75);
     }
 }
