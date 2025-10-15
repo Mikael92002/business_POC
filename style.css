@@ -6,6 +6,7 @@ html {
 
     background-color: black;
     font-family: "universal-font", sans-serif;
+    color: rgb(204, 255, 0);
 }
 
 body {
@@ -95,12 +96,27 @@ main {
     margin: 5rem;
 }
 
-.main-picture.one,
-.main-picture.two {
+.main-picture.one {
     width: 100%;
     animation: appear linear both;
     animation-timeline: view();
     animation-range: entry 0 cover 80%;
+}
+
+.main-picture.two{
+    width: 100%;
+    animation: translate ease-in both;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+#picture-content {
+    text-align: center;
+    font-size: 3vw;
+}
+
+#picture-content>div {
+    animation: 2s fade-in-translate 3.5s backwards;
 }
 
 .scroll-section {
@@ -111,7 +127,7 @@ footer {
     color: rgb(204, 255, 0);
     text-align: center;
     border-top: 1px solid rgb(204, 255, 0);
-    font-size:2vw;
+    font-size: 2vw;
 }
 
 /* typing effect */
@@ -179,5 +195,14 @@ footer {
     100% {
         opacity: 0;
         scale: 0.5;
+    }
+}
+
+@keyframes translate{
+    0%{
+        transform: translateX(-110vw)
+    }
+    100%{
+        transform:translateX(0vw);
     }
 }
