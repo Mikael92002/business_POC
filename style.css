@@ -15,6 +15,7 @@ body {
 header {
     background-color: black;
     padding: 5px;
+    border-bottom: 1px solid rgb(204, 255, 0);
 }
 
 #header-flex-container {
@@ -23,7 +24,7 @@ header {
     align-items: center;
 }
 
-#no-logo{
+#no-logo {
     height: 4vw;
 }
 
@@ -49,11 +50,11 @@ header {
     font-size: 5vw;
 }
 
-main{
+main {
     margin-top: 1rem;
 }
 
-#main-parent-flex-container{
+#main-parent-flex-container {
     display: flex;
     justify-content: center;
     margin-bottom: 500px;
@@ -67,58 +68,83 @@ main{
     align-items: center;
 }
 
-#now-scroll{
+#now-scroll {
     margin-top: 150px;
     font-size: 6vw;
     animation: 2s fade-in-translate 3.5s backwards;
 }
 
 #main-text {
-    
-    overflow: hidden; 
-  border-right: .15em solid rgb(204, 255, 0); 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  animation: 
-    typing 3.5s steps(120, end),
-    blink-caret .75s step-end infinite;
+
+    overflow: hidden;
+    border-right: .15em solid rgb(204, 255, 0);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        typing 3.5s steps(120, end),
+        blink-caret .75s step-end infinite;
     font-weight: 0;
     font-size: 3vw;
 }
 
-#main-content{
+#main-content {
     position: relative;
     text-align: center;
-    color:rgb(204, 255, 0);
+    color: rgb(204, 255, 0);
     margin-top: 1rem;
     margin: 5rem;
 }
 
-#main-picture{
+.main-picture.one,
+.main-picture.two {
     width: 100%;
-    animation: appear linear;
+    animation: appear linear both;
     animation-timeline: view();
-    animation-range: entry 0 cover 50%;
+    animation-range: entry 0 cover 80%;
 }
 
+.scroll-section {
+    margin-bottom: 750px;
+}
+
+footer {
+    color: rgb(204, 255, 0);
+    text-align: center;
+    border-top: 1px solid rgb(204, 255, 0);
+    font-size:2vw;
+}
 
 /* typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-/* typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
-@keyframes fade-in-translate{
-    0%{
+/* typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+@keyframes fade-in-translate {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
@@ -134,13 +160,24 @@ main{
     }
 }
 
-@keyframes appear{
-    from{
-        opacity:0;
+@keyframes appear {
+    0% {
+        opacity: 0;
         scale: 0.5;
     }
-    to{
+
+    45% {
         opacity: 1;
-        scale:1;
+        scale: 1;
+    }
+
+    55% {
+        opacity: 1;
+        scale: 1
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.5;
     }
 }
