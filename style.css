@@ -1,234 +1,145 @@
-body,
-html {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: rock;
+    src: url(./fonts/Demo_Fonts/Fontspring-DEMO-rocgrotesk-regular.otf) format("opentype");
+}
+@font-face {
+    font-family: alga;
+    src: url(./fonts/fonts/fonnts.com-Alga-.otf);
+}
+html,
+body {
     padding: 0;
-    transition: opacity 0.5s ease-in-out;
-
-    background-color: black;
-    font-family: "universal-font", sans-serif;
-    color: rgb(204, 255, 0);
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(58, 54, 58), rgb(154, 146, 160));
+    min-height: 100dvh;
 }
 
-body {
-    animation: 0.5s ease-out 0s 1 page-load;
+.main-content.wrapper {
+    max-height: 100%;
+    padding-top: 1.5rem;
+}
+
+.main-content.one {
+    margin: 0 1.5rem;
+    height: 50dvh;
+    background-image: url("./assets/spaceOne.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
-    background-color: black;
-    padding: 5px;
-    border-bottom: 1px solid rgb(204, 255, 0);
-}
-
-#header-flex-container {
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
+}
+
+.logo-container,
+.right-button-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-#no-logo {
-    height: 4vw;
+.logo-container>img {
+    width: 6vw;
+    transition: transform 0.5s ease-in-out;
+}
+.logo-container>img:hover{
+transform: scale(1.2);
 }
 
-#menu-container>div {
-    border-bottom: 3px solid white;
-    width: 40px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+button {
+    margin: 0;
+    font-family: "rock", sans-serif;
+    font-weight: 900;
 }
 
-#menu-container {
-    transition: background-color 0.5s ease-out;
-    padding: 0px 8px;
+.top-buttons {
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.664);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 0px rgb(255, 255, 255);
+}
+
+.top-buttons>button {
+    all: unset;
     cursor: pointer;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    font-family: "rock", sans-serif;
+    font-weight: 400;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
 }
 
-#menu-container:hover {
-    background-color: rgb(79, 79, 79);
+.top-buttons>button:hover {
+    background-color: rgba(58, 58, 58, 0.802);
 }
 
-#slogan {
-    color: rgb(204, 255, 0);
-    font-size: 5vw;
+.right-button{
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.right-button:hover{
+    background-color: rgb(143, 143, 143);
 }
 
-main {
-    margin-top: 1rem;
-}
-
-#main-parent-flex-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 500px;
-    color: rgb(204, 255, 0)
-}
-
-#main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#now-scroll {
-    margin-top: 150px;
-    font-size: 6vw;
-    animation: 2s fade-in-translate 3.5s backwards;
-}
-
-#main-text {
-
-    overflow: hidden;
-    border-right: .15em solid rgb(204, 255, 0);
-    white-space: nowrap;
-    margin: 0 auto;
-    animation:
-        typing 3.5s steps(120, end),
-        blink-caret .75s step-end infinite;
-    font-weight: 0;
-    font-size: 3vw;
-}
-
-#main-content {
-    position: relative;
-    text-align: center;
-    color: rgb(204, 255, 0);
-    margin-top: 1rem;
-    margin: 5rem;
-}
-
-.main-picture.one {
-    width: 100%;
-    animation: appear linear both;
-    animation-timeline: view();
-    animation-range: entry 0 cover 80%;
-}
-
-.main-picture.two {
-    width: 100%;
-    animation: translate ease-in both;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
-}
-
-.main-picture.three {
-    width: 100%;
-    animation: scaling ease-in both;
-    animation-timeline: view();
-    animation-range: entry 0 cover 80%;
-}
-
-#picture-content {
-    text-align: center;
-    font-size: 3vw;
-}
-
-#picture-content>div {
-    animation: 2s fade-in-translate 3.5s backwards;
-}
-
-.scroll-section {
-    margin-bottom: 950px;
-}
-
-footer {
-    color: rgb(204, 255, 0);
-    text-align: center;
-    border-top: 1px solid rgb(204, 255, 0);
-    font-size: 2vw;
-}
-
-/* typing effect */
-@keyframes typing {
-    from {
-        width: 0
+@media screen and (max-width: 500px){
+    .top-buttons{
+        border-radius: 60px;
     }
-
-    to {
-        width: 100%
+    .top-buttons>button, .right-button {
+        font-size: 2vw;
+        padding: 10px 20px;
+        border-radius: 60px;
+    }
+    .hero-text{
+        font-size: 5vw;
     }
 }
 
-/* typewriter cursor effect */
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
+@media screen and (max-width: 1080px) {
+    .top-buttons{
+        border-radius: 60px;
     }
-
-    50% {
-        border-color: orange;
+    .top-buttons>button, .right-button {
+        font-size: 1.75vw;
+        padding: 10px 20px;
+        border-radius: 60px;
     }
-}
-
-@keyframes fade-in-translate {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
+    .hero-text{
+        font-size: 4vw;
     }
 }
 
-@keyframes page-load {
-    0% {
-        opacity: 0;
+@media screen and (min-width: 1080px) {
+    .top-buttons{
+        border-radius: 60px;
     }
-
-    100% {
-        opacity: 1;
+    .top-buttons>button {
+        font-size: 2vw;
+        padding: 10px 30px;
+        border-radius: 60px;
     }
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-        scale: 0.5;
+    .right-button{
+        font-size: 1.75vw;
     }
-
-    45% {
-        opacity: 1;
-        scale: 1;
-    }
-
-    55% {
-        opacity: 1;
-        scale: 1
-    }
-
-    100% {
-        opacity: 0;
-        scale: 0.5;
+    .hero-text{
+        font-size: 3vw;
     }
 }
 
-@keyframes translate {
-    0% {
-        transform: translateX(-110vw)
-    }
-
-    100% {
-        transform: translateX(0vw);
-    }
-}
-
-@keyframes scaling {
-    0% {
-        transform: scale(0.5);
-    }
-
-    40% {
-        transform: scale(1);
-    }
-
-    60% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(0.75);
-    }
+p{
+    font-family: alga, sans-serif;
+    color: white;
+    width: fit-content;
+    box-shadow: 0px 0px 5px 2px rgb(0, 0, 0);
+    margin-left: 2px;
 }

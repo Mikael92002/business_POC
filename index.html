@@ -3,61 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business</title>
-    <link rel="preload" href="./fonts/BBH_Sans_Hegarty/BBHSansHegarty-Regular.ttf" as="font" type="font/ttf">
-    <style>
-        @font-face {
-            font-family: "universal-font";
-            src: url(./fonts/BBH_Sans_Hegarty/BBHSansHegarty-Regular.ttf) format("truetype");
-            font-weight: 100;
-            font-style: normal;
-        }
-
-        #slogan {
-            font-family: "universal-font";
-        }
-    </style>
+    <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div id="header-flex-container">
-            <img src="./assets/thenocompany_logo.png" alt="no logo" id="no-logo">
-            <div id="slogan">Placeholder</div>
-            <div id="menu-container">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div id="main-parent-flex-container">
-            <div id="main-container">
-                <div id="main-text">Where mediocrity is shit or something like that . . .</div>
-                <div id="now-scroll">Now scroll ↓</div>
-            </div>
-
-        </div>
-
-        <section class="scroll-section">
-            <div class="sticky-picture">
-                <div id="picture-content">
-                    <div>Scaling w/ fade in/out:</div>
-                    <img src="./assets/main_content_picture.jpg" alt="main picture" class="main-picture one">
-
-                    <div>Translation across x-axis:</div>
-                    <img src="./assets/main_content_picture_2.jpg" alt="main picture 2" class="main-picture two">
-                    <div>Scaling:</div>
-                    <img src="./assets/main-content-picture_3.jpg" alt="" class="main-picture three">
+    <div class="main-content wrapper">
+        <div class="main-content one">
+            <header>
+                <div class="logo-container">
+                    <img src="./assets/thenocompany_logo.png" alt="logo pic">
                 </div>
-            </div>
-        </section>
-    </main>
+                <div class="top-buttons">
+                    <button>Camping</button>
+                    <button>Pricing</button>
+                    <button>Services</button>
+                    <button>Contact</button>
+                </div>
+                <div class="right-button-container">
+                    <button class="right-button">Get Started</button>
+                </div>
+            </header>
 
-    <footer>
-       2025 All rights reserved &copy
-    </footer>
+            <main>
+                <p class="hero-text">Escape the Ordinary<br>Camp under the stars</p>
+            </main>
+            <footer>
+                
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
