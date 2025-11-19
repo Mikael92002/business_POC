@@ -16,11 +16,29 @@ body {
     margin: 0;
     background-image: linear-gradient(to bottom right, rgb(58, 54, 58), rgb(154, 146, 160));
     min-height: 100dvh;
+    overflow-x: hidden;
 }
 
 .main-content.wrapper {
     max-height: 100%;
     padding-top: 1.5rem;
+    animation: fadeIn 1s ease-in-out 1 both;
+}
+
+@keyframes fadeIn {
+
+    0%{
+        opacity: 0;
+        transform: scale(1.1);
+        
+    }
+    50%{
+        opacity: 0.33;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .main-content.one {
