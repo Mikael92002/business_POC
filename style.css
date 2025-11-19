@@ -92,7 +92,7 @@ button {
     transition: background-color 0.2s ease-in-out;
 }
 
-.right-button:hover {
+.right-button:hover, .bottom:hover {
     background-color: rgb(143, 143, 143);
 }
 
@@ -198,6 +198,9 @@ p {
 .bottom {
     border-radius: 20px;
     padding: 5px 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out
 }
 
 footer {
