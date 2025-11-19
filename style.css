@@ -103,6 +103,9 @@ button {
     .hero-text{
         font-size: 5vw;
     }
+    .hero-description{
+        font-size: 3vw;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -117,6 +120,13 @@ button {
     .hero-text{
         font-size: 4vw;
     }
+    .hero-description{
+        font-size: 2vw;
+    }
+    .bottom{
+        font-size: 1.75vw;
+        border-radius: 60px;
+    }
 }
 
 @media screen and (min-width: 1080px) {
@@ -124,23 +134,47 @@ button {
         border-radius: 60px;
     }
     .top-buttons>button {
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding: 10px 30px;
         border-radius: 60px;
     }
     .right-button{
-        font-size: 1.75vw;
+        font-size: 1.5vw;
     }
     .hero-text{
         font-size: 3vw;
     }
+    .hero-description{
+        font-size: 1.5vw;
+    }
+    .bottom{
+        font-size: 1.25vw;
+        border-radius: 60px;
+    }
 }
 
-p{
+main{
+    margin-left: 30px;
+}
+.hero-section{
     font-family: alga, sans-serif;
     color: white;
     width: fit-content;
     margin-left: 2px;
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter:blur(10px);
+    text-shadow: 1px 1px 2px black;
+}
+
+.hero-description{
+    color: white;
+    width: fit-content;
+    margin-left: 2px;
+
+}
+p{
+    margin: 15px 0px;
+}
+
+.bottom{
+    border-radius: 20px;
+    padding: 5px 10px;
 }
