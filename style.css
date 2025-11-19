@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: rock;
     src: url(./fonts/Demo_Fonts/Fontspring-DEMO-rocgrotesk-regular.otf) format("opentype");
 }
+
 @font-face {
     font-family: alga;
     src: url(./fonts/fonts/fonnts.com-Alga-.otf);
 }
+
 html,
 body {
     padding: 0;
@@ -22,7 +25,7 @@ body {
 
 .main-content.one {
     margin: 0 1.5rem;
-    height: 50dvh;
+    height: 70dvh;
     background-image: url("./assets/background-img.png");
     background-size: cover;
     background-position: center;
@@ -49,8 +52,9 @@ header {
     width: 6vw;
     transition: transform 0.5s ease-in-out;
 }
-.logo-container>img:hover{
-transform: scale(1.2);
+
+.logo-container>img:hover {
+    transform: scale(1.2);
 }
 
 button {
@@ -81,82 +85,98 @@ button {
     background-color: rgba(58, 58, 58, 0.802);
 }
 
-.right-button{
+.right-button {
     border-radius: 30px;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
-.right-button:hover{
+
+.right-button:hover {
     background-color: rgb(143, 143, 143);
 }
 
-@media screen and (max-width: 500px){
-    .top-buttons{
+@media screen and (max-width: 500px) {
+    .top-buttons {
         border-radius: 60px;
     }
-    .top-buttons>button, .right-button {
+
+    .top-buttons>button,
+    .right-button {
         font-size: 2vw;
         padding: 10px 20px;
         border-radius: 60px;
     }
-    .hero-text{
+
+    .hero-text {
         font-size: 5vw;
     }
-    .hero-description{
+
+    .hero-description {
         font-size: 3vw;
     }
 }
 
 @media screen and (max-width: 1080px) {
-    .top-buttons{
+    .top-buttons {
         border-radius: 60px;
     }
-    .top-buttons>button, .right-button {
+
+    .top-buttons>button,
+    .right-button {
         font-size: 1.75vw;
         padding: 10px 20px;
         border-radius: 60px;
     }
-    .hero-text{
+
+    .hero-text {
         font-size: 4vw;
     }
-    .hero-description{
+
+    .hero-description {
         font-size: 2vw;
     }
-    .bottom{
+
+    .bottom {
         font-size: 1.75vw;
         border-radius: 60px;
     }
 }
 
 @media screen and (min-width: 1080px) {
-    .top-buttons{
+    .top-buttons {
         border-radius: 60px;
     }
+
     .top-buttons>button {
         font-size: 1.5vw;
         padding: 10px 30px;
         border-radius: 60px;
     }
-    .right-button{
+
+    .right-button {
         font-size: 1.5vw;
     }
-    .hero-text{
+
+    .hero-text {
         font-size: 3vw;
     }
-    .hero-description{
+
+    .hero-description {
         font-size: 1.5vw;
     }
-    .bottom{
+
+    .bottom {
         font-size: 1.25vw;
         border-radius: 60px;
     }
 }
 
-main{
+main {
     margin-left: 30px;
 }
-.hero-section{
+
+.hero-section {
     font-family: alga, sans-serif;
     color: white;
     width: fit-content;
@@ -164,17 +184,47 @@ main{
     text-shadow: 1px 1px 2px black;
 }
 
-.hero-description{
+.hero-description {
     color: white;
     width: fit-content;
     margin-left: 2px;
 
 }
-p{
+
+p {
     margin: 15px 0px;
 }
 
-.bottom{
+.bottom {
     border-radius: 20px;
     padding: 5px 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    margin-bottom: 60px;
+}
+.footer-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.prof {
+    width: 3vw;
 }
